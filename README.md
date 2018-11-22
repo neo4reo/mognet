@@ -1,5 +1,11 @@
 Optical Character Recognition for Latin-based languages.
 
+The following binaries and data files are required for this application to run: https://dl.google.com/vision/1700/ocr/ocr_x86.zip; extract the folder into this directory, placing `libocr.so` and the `data` folder into the root.
+
+```
+ff3dcfd5e3828224849fbeffe1ed2e71a7ad3400  ocr_x86.zip
+```
+
 ## Example
 
 (the following example can be found in the [\_\_main\_\_.py](https://github.com/meme/zorc/blob/master/example/__main__.py) file located in the examples directory)
