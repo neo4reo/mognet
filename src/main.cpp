@@ -171,10 +171,10 @@ int main(void) {
   char _cwd[PATH_MAX];
   getcwd(_cwd, sizeof(_cwd));
 
-  char libocr[PATH_MAX + 11];
-  sprintf(libocr, "%s/libocr.so", _cwd);
+  char libocr[PATH_MAX + 21];
+  sprintf(libocr, "%s/libs/x86/libocr.so", _cwd);
 
-  char models[PATH_MAX + 6];
+  char models[PATH_MAX + 14];
   sprintf(models, "%s/data/models", _cwd);
 
   void* libmLib = load_os_library("libm.so.6", m_symbol_table);
@@ -182,7 +182,7 @@ int main(void) {
   if (libmLib == NULL)
     return -1;
 
-  void* handle = hybris_dlopen(libocrPath, RTLD_LAZY);
+  void* handle = hybris_dlopen(libocr, RTLD_LAZY);
 
   if (handle == NULL)
     return -1;
